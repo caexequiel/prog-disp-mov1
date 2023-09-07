@@ -120,7 +120,7 @@ function sumaDigitosPares() {
 
             // Mostramos el número ingresado y la suma resultante
             // Mostrar la suma
-            document.querySelector(".resultado1").textContent = suma;
+            document.querySelector(".resultado5").textContent = suma;
         }
     
     /*-----Carrusel vertical-----*/
@@ -460,4 +460,5 @@ class Carousel {
       vertical: !vertical,
     });
   
+  })
   })
