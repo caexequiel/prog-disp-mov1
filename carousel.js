@@ -19,6 +19,7 @@ function mayor() {
                 // Los números son iguales
                 alert("Los números son iguales");
             }
+          }
 
     /*Categoría de edad*/
 function categoriaEdad() { 
@@ -88,7 +89,7 @@ function tablaMultiplicar() {
                 for (let i = 1; i <= 10; i++) {
                     document.write(numero + " x " + i + " = " + numero * i + "<br>");
                 }
-            }     
+            }  
 
     /*Suma de números pares*/
 function sumaDigitosPares() {
@@ -459,4 +460,4 @@ class Carousel {
       vertical: !vertical,
     });
   
-  });
+  })
