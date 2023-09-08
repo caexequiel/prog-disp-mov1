@@ -1,127 +1,156 @@
 /*Mayor que un número*/
 function mayor() {
-            // Declaramos las variables para almacenar los números
-            let num1 = prompt("Ingresa el primer número: ");
-            let num2 = prompt("Ingresa el segundo número: ");
+            // Obtener el valor del input
+            let num1 = document.getElementById("num_1_1").value;
+            let num2 = document.getElementById("num_1_2").value;
+            let resp1 = "";
 
-            // Convertimos los números a números enteros
+            // Convertimos el número a un número entero
             num1 = Number(num1);
             num2 = Number(num2);
 
             // Comparamos los números
             if (num1 > num2) {
                 // El primer número es mayor
-                alert("El número mayor es: " + num1);
+                resp1 ="El número mayor es: " + num1;
             } else if (num2 > num1) {
                 // El segundo número es mayor
-                alert("El número mayor es: " + num2);
-            } else {
-                // Los números son iguales
-                alert("Los números son iguales");
+                resp1 = "El número mayor es: " + num2;
+            } else if (isNaN(num2) || isNaN(num1)) {
+                // El segundo número es mayor
+                resp1 = "El número mayor es: " + num2;
             }
+             else {
+                // Los números son iguales
+                resp1 = "Los números son iguales";
+            }
+            // Mostrar el resultado
+            document.querySelector(".resultado1").textContent = resp1;
           }
 
     /*Categoría de edad*/
 function categoriaEdad() { 
-            // Declaramos la variable para almacenar la edad
-            let edad = prompt("Ingresa tu edad: ");
-
+            // Obtener el valor del input
+            let edad = document.getElementById("num_2").value;
             // Convertimos la edad a un número entero
             edad = Number(edad);
 
+            let resp2 ="";
+
             // Determinamos la categoría de edad
-            if (edad < 18) {
+            if (edad <= 0) {
+              // Adolescente
+              resp2 = "Todavía no naciste, coloca un número valido";
+            }else if (edad < 18) {
                 // Niño
-                alert("Eres un niño");
+                resp2 = "Eres un niño";
             } else if (edad < 25) {
                 // Adolescente
-                alert("Eres un adolescente");
+                resp2 = "Eres un adolescente";
             } else if (edad < 65) {
                 // Adulto
-                alert("Eres un adulto");
+                resp2 = "Eres un adulto";
             } else {
                 // Adulto mayor
-                alert("Eres un adulto mayor");
+                resp2 = "Eres un adulto mayor";
             }
+            // Mostrar el resultado
+            const elemento2 = document.getElementById("resultado2");
+            elemento2.textContent = resp2;
         }
 
     /*Calculadora simple*/
-function calculadora() {
-            // Declaramos las variables para almacenar los números y la operación
-            let num1 = prompt("Ingresa el primer número: ");
-            let num2 = prompt("Ingresa el segundo número: ");
-            let opcion = prompt("Selecciona una operación (+, -, *, /): ");
+function calculadora(operador) {
+            // Obtener el valor del input
+            let num1 = document.getElementById("num_3_1").value;
+            let num2 = document.getElementById("num_3_2").value;
 
+            let resp3;
             // Convertimos los números a números enteros
             num1 = Number(num1);
             num2 = Number(num2);
 
             // Realizamos la operación
-            let resultado;
-            switch (opcion) {
+            switch (operador) {
                 case "+":
-                resultado = num1 + num2;
+                  resp3 = num1 + num2;
                 break;
                 case "-":
-                resultado = num1 - num2;
+                  resp3 = num1 - num2;
                 break;
                 case "*":
-                resultado = num1 * num2;
+                  resp3 = num1 * num2;
                 break;
                 case "/":
-                resultado = num1 / num2;
+                  resp3 = num1 / num2;
                 break;
             }
 
-            // Mostramos el resultado
-            alert("El resultado es: " + resultado);
+            // Mostramos el resultado   
+            const elemento = document.getElementById("resultado3");
+            elemento.textContent = resp3;
     }
 
-    /*Multiplicación*/
+  /*Multiplicación*/
+
 function tablaMultiplicar() {
-                // Declaramos la variable para almacenar el número
-                let numero = prompt("Ingresa un número: ");
+    // Obtener el valor del input
+    let numero = document.getElementById("num_4").value;
 
-                // Convertimos el número a un número entero
-                numero = Number(numero);
+    // Convertimos el número a un número entero
+    numero = Number(numero);
+    let tabla = [];
 
-                // Imprimimos la tabla de multiplicar
-                for (let i = 1; i <= 10; i++) {
-                    document.write(numero + " x " + i + " = " + numero * i + "<br>");
-                }
-            }  
+    // Imprimimos la tabla de multiplicar
+    for (let i = 1; i <= 10; i++) {
+        tabla.push(numero + " x " + i + " = " + numero * i);
+    }
 
-    /*Suma de números pares*/
+    // Mostrar la tabla
+    const elemento4 = document.getElementById("resultado4");
+
+    // Eliminar los hijos
+    while (elemento4.firstChild) {
+      elemento4.removeChild(elemento4.firstChild);
+    }
+    for (let i = 0; i < tabla.length; i++) {
+        const elemento = document.createElement("h4");
+        elemento.textContent = tabla[i];
+        elemento4.appendChild(elemento);
+    }
+}
+
+/*Suma de números pares*/
 function sumaDigitosPares() {
-            // Obtener el valor del input
-            const num = document.getElementById("num_5").value;
+  // Obtener el valor del input
+  const num3 = document.getElementById("num_5").value;
 
-            // Convertimos el número a un número entero
-            numero = Number(num);
-            const numero2 = numero;
+  // Convertimos el número a un número entero
+  numero = Number(num3);
+  const numero2 = numero;
 
-            // Declaramos la variable para almacenar la suma de los dígitos pares
-            let suma = 0;
+  // Declaramos la variable para almacenar la suma de los dígitos pares
+  let suma = 0;
 
-            // Recorremos los dígitos del número
-            for (let i = 0; numero > 0; i++) {
-                // Obtenemos el dígito actual
-                let digito = numero % 10;
+  // Recorremos los dígitos del número
+  for (let i = 0; numero > 0; i++) {
+      // Obtenemos el dígito actual
+      let digito = numero % 10;
 
-                // Si el dígito es par, lo sumamos
-                if (digito % 2 == 0) {
-                    suma += digito;
-                }
+      // Si el dígito es par, lo sumamos
+      if (digito % 2 == 0) {
+          suma += digito;
+      }
 
-                // Dividimos el número entre 10 para obtener el siguiente dígito
-                //floor redondea en la parte entera del número
-                numero = Math.floor(numero / 10);
-            }
+      // Dividimos el número entre 10 para obtener el siguiente dígito
+      //floor redondea en la parte entera del número
+      numero = Math.floor(numero / 10);
+  }
 
-            // Mostramos el número ingresado y la suma resultante
-            // Mostrar la suma
-            document.querySelector(".resultado5").textContent = suma;
-        }
+  // Mostrar la suma
+  const elemento5 = document.getElementById("resultado5");
+  elemento5.textContent = suma;
+}  
     
     /*-----Carrusel vertical-----*/
 class Carousel {

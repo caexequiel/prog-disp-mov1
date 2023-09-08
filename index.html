@@ -9,18 +9,62 @@
 </head>
 <body>
     <div class="C-carousel">
-        <div class="C-slide"><h1 class="C-slide-title C-slide-title--h1">Trabajo N° 1</h1></div>
+        <div class="C-slide">
+            
+            <section class="caratula">
+                <h1 class="C-slide-title C-slide-title--h1">Trabajo Práctico N° 1</h1>
+                <h5 class="subtitulos">Cátedra: Programación de dispositivos móviles</h5>
+                <h5 class="subtitulos">Alumnos: Colman, A. Exequiel - Mendoza, Lía B.</h5>
+                <h5 class="subtitulos">Escuela de Formación Profesional - UNAF</h5>
+            </section>
+            
+        </div>
         <div class="C-slide">
             <div class="C-slide-title">1- Mayor que dos números</div>        
+            <section class="ejercicio-1">
+                <input class = "numeros" type="number" name="num_1_1" id="num_1_1" placeholder="Ingrese el primer número ">
+                <input class = "numeros" type="number" name="num_1_2" id="num_1_2" placeholder="Ingrese el segundo número ">
+                <input class = "botones" type="button" value="CALCULAR" onclick="mayor()">
+                <h4>Resultado:</h4>
+                <h4 class = "resultado1"></h4>
+            </section>
+        
         </div>
         <div class="C-slide">
             <div class="C-slide-title">2- Categoría de edad</div>
+            <section class="ejercicio-1">
+                <input class = "numeros" type="number" name="num_2" id="num_2" placeholder="Ingrese su edad ">
+                <input class = "botones" type="button" value="CALCULAR" onclick="categoriaEdad()">
+                <h4>Resultado:</h4>
+                <h4 class = "resultado" id="resultado2"></h4>
+            </section>
+        
         </div>
         <div class="C-slide">
             <div class="C-slide-title">3- Calculadora simple</div>
+            <section class="ejercicio-1">
+                <input class = "numeros" type="number" name="num_3_1" id="num_3_1" placeholder="Ingrese el primer número ">
+                <input class = "numeros" type="number" name="num_3_2" id="num_3_2" placeholder="Ingrese el segundo número ">
+                <div class="contenedor-botones">   
+                    <input class = "botones2" type="button" value="+" onclick="calculadora('+')">
+                    <input class = "botones2" type="button" value="-" onclick="calculadora('-')">
+                    <input class = "botones2" type="button" value="x" onclick="calculadora('*')">
+                    <input class = "botones2" type="button" value="/" onclick="calculadora('/')">
+                </div> 
+                <h4>Resultado:</h4>
+                <h4 class = "resultado" id="resultado3"></h4>
+            </section>
+        
         </div>
         <div class="C-slide">
             <div class="C-slide-title">4- Tabla de multiplicar</div>
+            <section class="ejercicio-1">
+                <input class = "numeros" type="number" name="num_4" id="num_4" placeholder="Ingrese un número ">
+                <input class = "botones" type="button" value="VER TABLA" onclick="tablaMultiplicar()">
+                <h4>Resultado:</h4>
+                <h4 class = "resultado" id="resultado4"></h4>
+            </section>
+        
         </div>
         <div class="C-slide">
             <div class="C-slide-title">5- Suma de dígitos pares</div>
@@ -28,15 +72,15 @@
                 <input class = "numeros" type="number" name="num_5" id="num_5" placeholder="Ingrese un número ">
                 <input class = "botones" type="button" value="SUMAR" onclick="sumaDigitosPares()">
                 <h4>Resultado:</h4>
-                <h4 class = "resultado5"></h4>
+                <h4 class = "resultado" id="resultado5"></h4>
             </section>
         </div>
 
     </div>
       
-    <div class="pen-controls">
+    <!---<div class="pen-controls">
         <button class="js-change-carousel-direction" data-carousel-id="C-carousel-0">Change slider direction</button>
-    </div>
+    </div>-->
     <script src="carousel.js"></script> 
 </body>
 </html>

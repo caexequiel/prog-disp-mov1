@@ -52,8 +52,7 @@
         transform: scale(1) skew(0) rotate(0);
         border-radius: 0;
       }
-    }
-   
+    }  
    
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
@@ -61,6 +60,11 @@
       }
     }
    
+  }
+  
+  .caratula h5 {
+    text-align: center;
+    padding: 5px;
   }
   
   .C-navigation {
@@ -150,6 +154,7 @@
   }
   
   .C-slide-title {
+    margin-top: 24px;
     padding: 1rem 2rem;
     font-size: 1.5rem;
     position: relative;
@@ -157,13 +162,14 @@
     opacity: 0;
     transition: all 300ms ease;
     transition-delay: 500ms;
+    text-align: center;
     
     @media (min-width: 480px) {
       font-size: 2rem;
     }
     
     @media (min-width: 768px) {
-      font-size: 42px;
+      font-size: 64px;
     }
     
     .active & {
@@ -193,10 +199,7 @@
   }
 
 
-
-/* De Exe */
-
-
+/* De Estilos de Exe */
 *{
     margin: 0;
     padding: 0;
@@ -248,6 +251,23 @@
     color: white;
     border: 1px solid #1f53c5;
     font-size: 16px;
+}
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+
+}
+
+.botones2 {
+  width: 20%;
+  background: #1f53c5;
+  padding: 12px;
+  border: none;
+  margin: 16px 0;
+  color: white;
+  border: 1px solid #1f53c5;
+  font-size: 30px;
+  margin: 5px;
 }
 
 .resultado {
